@@ -22,6 +22,7 @@ process RUN_ALPHAFOLD2 {
     path ('mgnify/*')
     path ('pdb70/*')
     path ('pdb_mmcif/*')
+    path ('pdb_mmcif/*')
     path ('uniref30/*')
     path ('uniref90/*')
     path ('pdb_seqres/*')

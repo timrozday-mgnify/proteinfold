@@ -50,6 +50,7 @@ workflow ALPHAFOLD2 {
     ch_mgnify               // channel: path(mgnify)
     ch_pdb70                // channel: path(pdb70)
     ch_pdb_mmcif            // channel: path(pdb_mmcif)
+    ch_pdb_mmcif_obsolete   // channel: path(pdb_mmcif)
     ch_uniref30             // channel: path(uniref30)
     ch_uniref90             // channel: path(uniref90)
     ch_pdb_seqres           // channel: path(pdb_seqres)
@@ -89,6 +90,7 @@ workflow ALPHAFOLD2 {
             ch_mgnify,
             ch_pdb70,
             ch_pdb_mmcif,
+            ch_pdb_mmcif_obsolete,
             ch_uniref30,
             ch_uniref90,
             ch_pdb_seqres,

@@ -106,6 +106,7 @@ workflow NFCORE_PROTEINFOLD {
             PREPARE_ALPHAFOLD2_DBS.out.mgnify,
             PREPARE_ALPHAFOLD2_DBS.out.pdb70,
             PREPARE_ALPHAFOLD2_DBS.out.pdb_mmcif,
+            PREPARE_ALPHAFOLD2_DBS.out.pdb_mmcif_obsolete,
             PREPARE_ALPHAFOLD2_DBS.out.uniref30,
             PREPARE_ALPHAFOLD2_DBS.out.uniref90,
             PREPARE_ALPHAFOLD2_DBS.out.pdb_seqres,

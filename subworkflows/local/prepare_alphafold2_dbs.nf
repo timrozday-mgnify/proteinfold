@@ -65,7 +65,8 @@ workflow PREPARE_ALPHAFOLD2_DBS {
         ch_params         = Channel.value(file(alphafold2_params_path))
         ch_mgnify         = Channel.value(file(mgnify_path))
         ch_pdb70          = Channel.value(file(pdb70_path, type: 'dir'))
-        ch_mmcif          = Channel.value(file("${pdb_mmcif_path}/*"))
+        ch_mmcif_files    = Channel.value(file("${pdb_mmcif_path}/mmcif_files", type: 'dir'))
+        ch_mmcif_obsolete = Channel.value(file("${pdb_mmcif_path}/obsolete.dat"))
         ch_uniref30       = Channel.value(file(uniref30_alphafold2_path, type: 'dir'))
         ch_uniref90       = Channel.value(file(uniref90_path))
         ch_pdb_seqres     = Channel.value(file(pdb_seqres_path))
@@ -149,15 +150,16 @@ workflow PREPARE_ALPHAFOLD2_DBS {
     }
 
     emit:
-    bfd        = ch_bfd
-    small_bfd  = ch_small_bfd
-    params     = ch_params
-    mgnify     = ch_mgnify
-    pdb70      = ch_pdb70
-    pdb_mmcif  = ch_mmcif
-    uniref30   = ch_uniref30
-    uniref90   = ch_uniref90
-    pdb_seqres = ch_pdb_seqres
-    uniprot    = ch_uniprot
-    versions   = ch_versions
+    bfd                 = ch_bfd
+    small_bfd           = ch_small_bfd
+    params              = ch_params
+    mgnify              = ch_mgnify
+    pdb70               = ch_pdb70
+    pdb_mmcif           = ch_mmcif_files
+    pdb_mmcif_obsolete  = ch_mmcif_obsolete
+    uniref30            = ch_uniref30
+    uniref90            = ch_uniref90
+    pdb_seqres          = ch_pdb_seqres
+    uniprot             = ch_uniprot
+    versions            = ch_versions
 }
