@@ -54,7 +54,7 @@ workflow PREPARE_ALPHAFOLD2_DBS {
 
     if (alphafold2_db) {
         if (full_dbs) {
-            ch_bfd       = Channel.value(file(bfd_path, type: 'dir'))
+            ch_bfd       = Channel.value(file("${bfd_path}/*"))
             ch_small_bfd = Channel.value(file("${projectDir}/assets/dummy_db"))
         }
         else {
