@@ -44,7 +44,7 @@ process RUN_ALPHAFOLD2 {
         alphafold2_model_preset += " --pdb_seqres_database_path=./pdb_seqres/pdb_seqres.txt --uniprot_database_path=./uniprot/uniprot.fasta "
     }
     else {
-        alphafold2_model_preset += " --pdb70_database_path=./pdb70/pdb70_from_mmcif_200916/pdb70 "
+        alphafold2_model_preset += " --pdb70_database_path=./pdb70/pdb70_from_mmcif_latest/pdb70 "
     }
     """
     if [ -f pdb_seqres/pdb_seqres.txt ]
