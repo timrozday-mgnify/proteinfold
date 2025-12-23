@@ -67,7 +67,7 @@ workflow PREPARE_ALPHAFOLD2_DBS {
         ch_pdb70          = Channel.value(file(pdb70_path, type: 'dir'))
         ch_mmcif_files    = Channel.value(file("${pdb_mmcif_path}/mmcif_files", type: 'dir'))
         ch_mmcif_obsolete = Channel.value(file("${pdb_mmcif_path}/obsolete.dat"))
-        ch_uniref30       = Channel.value(file(uniref30_alphafold2_path, type: 'dir'))
+        ch_uniref30       = Channel.value(file("${uniref30_alphafold2_path}/*"))
         ch_uniref90       = Channel.value(file(uniref90_path))
         ch_pdb_seqres     = Channel.value(file(pdb_seqres_path))
         ch_uniprot        = Channel.value(file(uniprot_path))
