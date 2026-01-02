@@ -3,7 +3,7 @@
  */
 process RUN_ALPHAFOLD2 {
     tag "$meta.id"
-    label 'process_medium'
+    label 'process_high'
 
     // Exit if running this module with -profile conda / -profile mamba
     if (workflow.profile.tokenize(',').intersect(['conda', 'mamba']).size() >= 1) {
